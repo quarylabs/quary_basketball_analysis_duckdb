@@ -1,0 +1,119 @@
+sources:
+- name: raw_draft_combine
+  path: '''data/draft_combine.csv'''
+- name: raw_draft
+  path: '''data/draft.csv'''
+- name: raw_game_inactive_players
+  path: '''data/game_inactive_players.csv'''
+- name: raw_game_inactive_players
+  path: '''data/game_inactive_players.csv'''
+- name: raw_game_officials
+  path: '''data/game_officials.csv'''
+- name: raw_game
+  path: '''data/game.csv'''
+- name: raw_News_Missing
+  path: '''data/News_Missing.csv'''
+- name: raw_news
+  path: '''data/news.csv'''
+- name: raw_player_attributes
+  path: '''data/player_attributes.csv'''
+- name: raw_player_bios
+  path: '''data/player_bios.csv'''
+- name: raw_player_photos
+  path: '''data/player_photos.csv'''
+- name: raw_player_salary
+  path: '''data/player_salary.csv'''
+- name: raw_player
+  path: '''data/player.csv'''
+- name: raw_team_attributes
+  path: '''data/team_attributes.csv'''
+- name: raw_team_history
+  path: '''data/team_history.csv'''
+- name: raw_team_salary
+  path: '''data/team_salary.csv'''
+- name: raw_team
+  path: '''data/team.csv'''
+models:
+- name: stg_players
+  description: This table contains player data including personal information, attributes, and statistics.
+  columns:
+  - name: id_player
+    description: The unique identifier for the player.
+    tests:
+    - type: unique
+    - type: not_null
+  - name: full_name
+    description: The full name of the player.
+  - name: first_name
+    description: The first name of the player.
+  - name: last_name
+    description: The last name of the player.
+  - name: is_active
+    description: Flag indicating if the player is currently active.
+  - name: birth_year
+    description: The birth year of the player.
+  - name: school
+    description: The school the player attended.
+  - name: height
+    description: The height of the player.
+  - name: country
+    description: The country of origin of the player.
+  - name: last_affiliation
+    description: The last team or school the player was affiliated with.
+  - name: weight
+    description: The weight of the player.
+  - name: season_exp
+    description: The number of seasons the player has played.
+  - name: jersey
+    description: The jersey number of the player.
+  - name: position
+    description: The position of the player on the team.
+  - name: roster_status
+    description: The current status of the player on the team roster.
+  - name: games_played_current_season_flag
+    description: Flag indicating if the player has played games in the current season.
+  - name: team_id
+    description: The unique identifier for the team the player is currently on.
+  - name: team_name
+    description: The name of the team the player is currently on.
+  - name: team_abbreviation
+    description: The abbreviation of the team the player is currently on.
+  - name: team_code
+    description: The code of the team the player is currently on.
+  - name: team_city
+    description: The city of the team the player is currently on.
+  - name: player_code
+    description: The code of the player.
+  - name: from_year
+    description: The year the player started their career.
+  - name: to_year
+    description: The year the player ended their career.
+  - name: dleague_flag
+    description: Flag indicating if the player has played in the D-League.
+  - name: nba_flag
+    description: Flag indicating if the player has played in the NBA.
+  - name: games_played_flag
+    description: Flag indicating if the player has played any games.
+  - name: draft_year
+    description: The year the player was drafted.
+  - name: draft_round
+    description: The round the player was drafted in.
+  - name: draft_number
+    description: The number the player was drafted at.
+  - name: pts
+    description: The average points per game of the player.
+  - name: ast
+    description: The average assists per game of the player.
+  - name: reb
+    description: The average rebounds per game of the player.
+  - name: all_star_appearances
+    description: The number of All-Star appearances of the player.
+  - name: pie
+    description: The Player Impact Estimate (PIE) of the player.
+- name: stg_draft_combine
+  columns:
+  - name: id_player
+  - name: wingspan_inches
+  - name: slug_position
+  - name: year_combine
+  - name: height_wo_shoes_inches
