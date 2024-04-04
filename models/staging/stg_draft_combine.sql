@@ -1,8 +1,8 @@
 SELECT
-    idPlayer as id_player,
-    yearCombine as year_combine,
-    heightWOShoesInches as height_wo_shoes_inches,
-    wingspanInches as wingspan_inches,
-    slugPosition as slug_position
+    IDPLAYER AS ID_PLAYER,
+    YEARCOMBINE AS YEAR_COMBINE,
+    HEIGHTWOSHOESINCHES AS HEIGHT_WO_SHOES_INCHES,
+    WINGSPANINCHES AS WINGSPAN_INCHES,
+    SLUGPOSITION AS SLUG_POSITION
 FROM
     q.raw_draft_combine

@@ -1,28 +1,28 @@
-## Example Quary analysis (DuckDB + project w/ Interactive Python Notebook)
+## NBA Analysis Project (DuckDB + Quary w/ Interactive Python Notebook)
 
-`jaffle_shop` is a fictional ecommerce store. This Quary project transforms raw data from '.csv'  with DuckDB into a customers and orders model ready for analytics.
+This project analyzes NBA data using DuckDB and Quary to transform raw data from .csv files into a structured database ready for analysis. The project also includes an interactive Python Notebook (NBA_Analysis.ipynb) that provides visual insights into team and player performance metrics.
 
-![template_duck_db](https://github.com/quarylabs/quary_jaffle_shop/assets/132601011/369d6f9f-2be3-4fdd-bcb6-58f9691a3009)
+### 📂 What's in this repo?
 
-This repo is a self-contained playground Quary project. It is helpful for trying Quary and learning some of its core concepts.
+This repo contains .csv data, including raw data on NBA players, teams, salaries, and draft information. The raw data is transformed using DuckDB and DBT into a structured database with the following views:
 
-### What's in this repo?
+- `stg_players`: Player information and statistics
+- `team_performance`: Team performance metrics
+- `player_performance`: Player performance metrics
+- `player_salary_info`: Player salary information
+- `team_salary_info`: Team salary information
+- `player_draft_info`: Player draft information
+- `player_combine_stats`: Player measurements from the draft combine
 
-This repo contains .csv data, including some (fake) raw data from a fictional app.
-The raw data consists of customers, orders, and payments, with the following entity-relationship diagram:
+### 🚀 Opening this project
 
-### Opening this project
+To explore this project, follow these steps:
 
-Once there, you can install the extension by either:
+Clone the repository to your local machine
+Open the project in VS Code
+Install the recommended extensions if prompted by VS Code
+To interact with the data models, navigate to any .sql file and use the following shortcuts:
 
-- Clicking the `Install` button in the bottom right corner when VS Code asks you to install recommended extensions
-- Clicking on the extensions icon and installing the extensions from there in the `Recommended` tab
+`CMD+D (ctrl on Windows)`: Open the model documentation
 
-To get a feel for interacting with data models, head to `customers.sql` and hit the `CMD+D` (ctrl on Windows) shortcut to open the model documentation or the `CMD+Enter` (ctrl on Windows) shortcut to see the transformed data.
-
----
-For more information on Quary:
-- Star our [opens-source repo](https://www.github.com/quarylabs/quary).
-- Read the [Quary documentation](https://www.quary.dev/docs).
-- Join the [Quary community](https://join.slack.com/t/quarylabs/shared_invite/zt-2dlbfnztw-dMLXJVL38NcbhqRuM5gUcw).
----
+`CMD+Enter (ctrl on Windows)`: View the transformed data

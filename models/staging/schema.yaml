@@ -111,9 +111,52 @@ models:
   - name: pie
     description: The Player Impact Estimate (PIE) of the player.
 - name: stg_draft_combine
+  description: This model contains data from the NBA Draft Combine, including player measurements and positions. (by year)
   columns:
   - name: id_player
+    description: The unique identifier for the player.
+    tests:
+    - type: not_null
   - name: wingspan_inches
+    description: The wingspan of the player in inches.
+    tests:
+    - type: gte
+      info:
+        value: '0'
   - name: slug_position
+    description: The position of the player.
   - name: year_combine
+    description: The year of the draft combine.
   - name: height_wo_shoes_inches
+    description: The height of the player without shoes in inches.
+- name: stg_team_salary
+  columns:
+  - name: team_name
+    tests:
+    - type: not_null
+    - type: unique
+  - name: slug_team
+  - name: 2020_salary
+  - name: 2021_salary
+  - name: 2022_salary
+  - name: 2023_salary
+  - name: 2024_salary
+  - name: 2025_salary
+- name: stg_draft
+  columns:
+  - name: id_player
+  - name: year_draft
+  - name: number_round
+  - name: name_player
+  - name: type_organization_from
+  - name: team_name
+  - name: location_organization_from
+  - name: number_pick_overall
+  - name: number_round_pick
+  - name: slug_team
+  - name: name_organization_from
+  - name: id_team
+  - name: name_team
+  - name: city_team
+  - name: slug_organization_type_from
+  - name: player_profile_flag
