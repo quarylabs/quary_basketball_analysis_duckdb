@@ -1,6 +1,6 @@
 ## NBA Analysis Project (DuckDB + Quary w/ Interactive Python Notebook)
 
-This project analyzes NBA data using DuckDB and Quary to transform raw data from .csv files into a structured database ready for analysis. The project also includes an interactive Python Notebook (NBA_Analysis.ipynb) that provides visual insights into team and player performance metrics.
+This project analyzes NBA data using DuckDB and Quary to transform raw data from .csv files into a structured database ready for analysis. The project also includes an [interactive Python Notebook (analysis.ipynb)](./analysis.ipynb) that provides visual insights into team and player performance metrics.
 
 ### 📂 What's in this repo?
 
