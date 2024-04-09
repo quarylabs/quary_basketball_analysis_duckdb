@@ -1,8 +1,0 @@
-models:
-- name: player_salary_info
-- name: players_appg
-- name: players_ppg
-- name: players_rpg
-- name: team_salary_info
-- name: teams_appg
-- name: teams_asa

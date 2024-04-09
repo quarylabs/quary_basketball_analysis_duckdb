@@ -1,5 +1,5 @@
 SELECT
-    p.id_player,
+    p.player_id,
     p.full_name,
     p.first_name,
     p.last_name,
@@ -24,6 +24,6 @@ SELECT
     s.type_contract_detail,
     s.value AS salary
 FROM
-    q.stg_players AS p
+    q.players AS p
 LEFT JOIN
     q.stg_player_salary AS s ON p.full_name = s.player_name

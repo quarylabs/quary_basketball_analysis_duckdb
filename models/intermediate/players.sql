@@ -1,5 +1,5 @@
 SELECT
-    player.id AS id_player,
+    player.id AS player_id,
     player.full_name,
     player.first_name,
     player.last_name,
@@ -41,4 +41,4 @@ FROM
 INNER JOIN
     q.raw_player_attributes AS attributes
     ON
-        (player.id = attributes.id)
+        player.id = attributes.id
